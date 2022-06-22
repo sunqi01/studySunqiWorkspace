@@ -1,0 +1,12 @@
+com\dbic\MainApp.class
+com\dbic\servlet\SpringServletService.class
+com\dbic\jdbctest\dao\SunqiADao.class
+com\dbic\springbean\setterPourInto\Profession.class
+com\dbic\springbean\javacol\JavaCol.class
+com\dbic\servlet\SpringServlet.class
+com\dbic\springbean\constructPourInto\Grade.class
+com\dbic\springbean\HelloWorld.class
+com\dbic\springbean\constructPourInto\Student.class
+com\dbic\jdbctest\entity\SunqiA.class
+com\dbic\springbean\setterPourInto\Teacher.class
+com\dbic\ConcurrentModificationExceptionTest.class

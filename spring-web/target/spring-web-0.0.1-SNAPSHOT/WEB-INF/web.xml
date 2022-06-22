@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>spring-web</display-name>
+
+	<!-- 配置上下文参数，他们的载入的时机看listenter的注册  classpath*:config/spring/spring-timertask.xml-->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:config/Bean.xml
+			classpath*:config/context.xml
+			classpath*:config/JDBC.xml
+		</param-value>
+	</context-param>
+	<!-- 这个侦听器会读取上面context-param中的参数 -->
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>springServlet</servlet-name>
+		<servlet-class>com.dbic.servlet.SpringServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/servlet/springServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 配置会话超时的时间 -->
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
+	<!-- 默认欢迎页面，如果只输入应用名，不输入文件，应用会按照这里面提供的顺序查找 -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+
+</web-app>
